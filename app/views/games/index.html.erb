@@ -1,0 +1,21 @@
+<%= render 'static_pages/header' %>
+
+<hr>
+<% @games.each do |game| %>
+
+  <div id="game-block">
+    
+    <div id="game-info">
+      <%= image_tag game.image %>
+      <h2><%= game.title %></h2>
+      <p><%= game.slug %></p>
+    </div>
+    
+    <div id="game-deals">
+      <a href='/items' class="btn btn-info" role="button">View Deals</a>
+    </div>
+    <hr>
+  </div>
+<% end %>
+
+<%= render 'static_pages/footer' %>

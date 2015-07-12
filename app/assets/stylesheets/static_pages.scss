@@ -1,0 +1,27 @@
+// Place all the styles related to the static-pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#tasks {
+  width: 30%;
+  padding-left: 30px;
+}
+
+#game-block {
+  #game-info {
+    padding-left: 30px;
+  }
+  
+  #game-deals {
+    padding-left: 30px;
+  }
+}
+
+#item-block {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#footer {
+  padding-left: 30px;
+}
