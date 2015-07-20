@@ -16,4 +16,17 @@ class ItemsController < ApplicationController
     end
   end
   
+  def show
+    unless Item.try(:where, id: params['id'], game_id: params['game_id']).empty? then
+      @item = Item.where(id: params['id'], game_id: params['game_id']).first
+      @game = Game.find params['game_id']
+    else
+      redirect_to home_path
+    end
+  end
+  
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+  
 end

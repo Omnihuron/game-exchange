@@ -39,6 +39,12 @@ a:visited {
   max-width: 62.5rem;
 }
 
+#logo {
+  img{
+    background-color: white;
+  }
+}
+
 #game-logo {
   float: right;
 }
@@ -67,48 +73,25 @@ a:visited {
   }
 }
 
-/*
-.jumbotron {
-  color: $button;
-  background-color: $jumbo;
+#item-image {
+  img{
+    width: 500px;
+  }
 }
 
-#tasks {
-    //width: 15%;
-    padding-left: 30px;
-  }
-  
-  .panel {
-    color: $button;
-    background-color: $sidebar;
+#item-info {
+  height: 407px;
+}
 
+#checkout {
+  height: 90px;
+  
+  h5 {
+    font-size: 3em;
+    float: left;
   }
   
-  .btn {
-    background-color: $button;
-    color: black;
+  a {
+    float: right;
   }
-  
-  .panel-heading {
-    background-color: $sidehead;
-  }
-  
-  #game-block {
-    #game-info {
-      padding-left: 30px;
-    }
-    
-    #game-deals {
-      padding-left: 30px;
-    }
-  }
-  
-  #item-block {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  
-  #footer {
-    padding-left: 30px;
-  }
-  */
+}

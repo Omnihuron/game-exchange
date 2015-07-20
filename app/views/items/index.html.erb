@@ -7,23 +7,12 @@
   
     <div class="row">
 
- 
-
       <div class="large-4 small-12 columns">
-
         <%= image_tag @banner %>
-
         <div class="hide-for-small panel">
           <h3><%= @game_title %></h3>
           <h5 class="subheader"><%= @game_desc %></h5>
         </div>
-
-        <a href="#">
-        <div class="panel callout radius">
-          <h6>99 items in your cart</h6>
-        </div>
-        </a>
-
       </div>
 
       <div class="large-8 columns">
@@ -37,7 +26,7 @@
                     <h4 id = "item-title"><%= item.title %></h4>
                     <h6 id = "item-desc"><%= item.slug %></h6>
                     <h6 class="subheader"><%= "$#{"%5.2f" % item.price}" %></h6>
-                    <%= link_to "Purchase", '#', class: "button" %>
+                    <%= link_to "Purchase", game_item_path(item.game_id, item), class: "button" %>
                   </div>
                 </div>
               <% end %>

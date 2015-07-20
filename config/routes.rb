@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'game_items'    => 'items#index'
   get 'games'         => 'games#index'
   get 'home'          => 'static_pages#index'
+  get 'game_item'     => 'items#show'
   
   # Example resource route with options:
   #   resources :products do
