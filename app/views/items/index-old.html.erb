@@ -1,0 +1,35 @@
+<%= render 'static_pages/header' %>
+
+<hr>
+
+
+<% @items.each_slice(3) do |slice| %>
+  <div class="row">
+    <% slice.each do |item| %>
+      <div class="col-md-4">
+        <div id="item-block">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div id="item-info">
+                <div class="text-center"> 
+                  <%= image_tag item.image %>
+                </div>
+                <h2 class="text-center"><%= item.title %></h2>
+                <p class="text-center"><%= item.slug %></p>
+                <p class="text-center"><%= "$#{"%5.2f" % item.price}" %></p>
+              </div>
+              
+              <div id="item-deals">
+                <div class="text-center"> 
+                  <a href=<%= "items/#{item.id}" %> class="btn btn-info" role="button">Purchase</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<%= render 'static_pages/footer' %>
