@@ -4,4 +4,8 @@ class GamesController < ApplicationController
     @games = Game.all
   end
   
+  def show
+    redirect_to game_items_path(params['id'])  
+  end
+  
 end
