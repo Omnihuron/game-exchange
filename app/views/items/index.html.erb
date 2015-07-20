@@ -26,16 +26,11 @@
 
       </div>
 
-   
-
-
-   
-
       <div class="large-8 columns">
           <% @items.each_slice(3) do |slice| %>
             <div class="row">
               <% slice.each do |item| %>
-                <div class="large-4 small-6 columns" id="image-block">
+                <div class="large-4 small-6 columns end" id="image-block">
                   <%= image_tag item.image %>
       
                   <div class="panel">
@@ -49,8 +44,6 @@
             </div>
           <% end %>
       </div>
-      
-      
       
     </div>
   </div>
