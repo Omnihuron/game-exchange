@@ -3,6 +3,18 @@
 <div class="row">
 <hr>
 
+<div class="row">
+  <div class="large-7 columns">
+    <ul class="breadcrumbs">
+      <li><%= link_to "Home", home_path %></li>
+      <li><%= link_to "Games", games_path %></li>
+      <li><%= link_to @game.title, game_items_path(@game) %></li>
+      <li class="current"><%= @item.title %></li>
+    </ul>
+  </div>
+</div>
+
+
 <div class="large-7 columns" id="item-image">
   <%= image_tag @item.image %>
 </div>
