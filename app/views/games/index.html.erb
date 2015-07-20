@@ -1,21 +1,20 @@
 <%= render 'static_pages/header' %>
 
-<hr>
 <% @games.each do |game| %>
-
-  <div id="game-block">
-    
-    <div id="game-info">
-      <%= image_tag game.image %>
-      <h2><%= game.title %></h2>
-      <p><%= game.slug %></p>
+  <div class="row">
+    <div class="large-12 columns">
+      <hr>
+      <div id="game-logo">
+        <%= image_tag game.image %>
+      </div>
+      <div id="game-info">
+        <h2><%= game.title %></h2>
+        <p><%= game.slug %></p>
+        <%= link_to "View Deals", game_items_path(game), class: "button" %>
+      </div>
     </div>
-    
-    <div id="game-deals">
-      <a href='/items' class="btn btn-info" role="button">View Deals</a>
-    </div>
-    <hr>
   </div>
 <% end %>
 
 <%= render 'static_pages/footer' %>
+

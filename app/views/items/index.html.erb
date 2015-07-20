@@ -1,36 +1,59 @@
 <%= render 'static_pages/header' %>
 
-<hr>
+<div class="row">
+  <div class="large-12 columns">
+  
+    <hr>
+  
+    <div class="row">
 
+ 
 
+      <div class="large-4 small-12 columns">
 
-<% @items.each_slice(3) do |slice| %>
-  <div class="row">
-    <% slice.each do |item| %>
-      <div class="col-md-4">
-        <div id="item-block">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <div id="item-info">
-                <div class="text-center"> 
-                  <%= image_tag item.image %>
-                </div>
-                <h2 class="text-center"><%= item.title %></h2>
-                <p class="text-center"><%= item.slug %></p>
-                <p class="text-center"><%= "$#{"%5.2f" % item.price}" %></p>
-              </div>
-              
-              <div id="item-deals">
-                <div class="text-center"> 
-                  <a href=<%= "items/#{item.id}" %> class="btn btn-info" role="button">Purchase</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <%= image_tag @banner %>
+
+        <div class="hide-for-small panel">
+          <h3><%= @game_title %></h3>
+          <h5 class="subheader"><%= @game_desc %></h5>
         </div>
+
+        <a href="#">
+        <div class="panel callout radius">
+          <h6>99 items in your cart</h6>
+        </div>
+        </a>
+
       </div>
-    <% end %>
+
+   
+
+
+   
+
+      <div class="large-8 columns">
+          <% @items.each_slice(3) do |slice| %>
+            <div class="row">
+              <% slice.each do |item| %>
+                <div class="large-4 small-6 columns" id="image-block">
+                  <%= image_tag item.image %>
+      
+                  <div class="panel">
+                    <h4 id = "item-title"><%= item.title %></h4>
+                    <h6 id = "item-desc"><%= item.slug %></h6>
+                    <h6 class="subheader"><%= "$#{"%5.2f" % item.price}" %></h6>
+                    <%= link_to "Purchase", '#', class: "button" %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+      </div>
+      
+      
+      
+    </div>
   </div>
-<% end %>
+</div>
 
 <%= render 'static_pages/footer' %>

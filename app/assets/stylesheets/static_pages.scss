@@ -2,26 +2,113 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#tasks {
-  width: 30%;
-  padding-left: 30px;
+//@import "bootstrap-sprockets";
+//@import "bootstrap";
+
+//$background: #C8E7FB;
+//$background: black;
+$background: #2E5E6D;
+$jumbo: #0F598D;
+$sidebar: #0053A1;
+$sidehead: #8CCCE5;
+$button: #F8F8F8;
+
+html, body {
+  background-color: $background;
+  //width: 100%;
 }
 
-#game-block {
-  #game-info {
+p, h1, h2, h3, h4 {
+  color: white;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+}
+
+#game-logo {
+  float: right;
+}
+
+#game-info {
+  float: left;
+}
+
+#image-block {
+  
+  img {
+    background-color: gray;
+    width: 500px;
+  }
+  
+  .panel {
+    height: 250px;
+    
+    #item-title {
+      height: 50px;
+    }
+    
+    #item-desc {
+      height: 60px;
+    }
+  }
+}
+
+/*
+.jumbotron {
+  color: $button;
+  background-color: $jumbo;
+}
+
+#tasks {
+    //width: 15%;
     padding-left: 30px;
   }
   
-  #game-deals {
+  .panel {
+    color: $button;
+    background-color: $sidebar;
+
+  }
+  
+  .btn {
+    background-color: $button;
+    color: black;
+  }
+  
+  .panel-heading {
+    background-color: $sidehead;
+  }
+  
+  #game-block {
+    #game-info {
+      padding-left: 30px;
+    }
+    
+    #game-deals {
+      padding-left: 30px;
+    }
+  }
+  
+  #item-block {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  #footer {
     padding-left: 30px;
   }
-}
-
-#item-block {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-#footer {
-  padding-left: 30px;
-}
+  */

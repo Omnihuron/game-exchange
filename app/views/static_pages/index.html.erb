@@ -1,5 +1,54 @@
 <%= render 'header' %>
 
-<%= render 'tasks' %>
+<div class="row">
+  <div class="large-12 columns">
+    <ul class="example-orbit" data-orbit>
+      <li><%= image_tag 'front-page/orbit/eso.jpg' %></li>
+      <li><%= image_tag 'front-page/orbit/knight.jpg' %></li>
+      <li><%= image_tag 'front-page/orbit/mu.jpg' %></li>
+      <li><%= image_tag 'front-page/orbit/rs.jpg' %></li>
+    </ul>
+    <hr/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+    <%= link_to(image_tag('front-page/ogre.png'), games_path) %>
+    <h4>Browse By Game</h4>
+    <p>Looking for a particular title? Start here to find deals for that game</p>
+  </div>
+  
+  <div class="large-4 columns">
+    <%= link_to(image_tag('front-page/inventory.png'), items_path) %>
+    <h4>Browse All Deals</h4>
+    <p>Check here if you want to look through all items and services we offer</p>
+  </div>
+  
+  <div class="large-4 columns">
+    <%= image_tag 'front-page/gold.jpg' %>
+    <h4>Weekly Deals</h4>
+    <p>Save yourself some GP with our deals of the week!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+  
+    <div class="panel">
+      <h4>Sign Up!</h4>
+          
+      <div class="row">
+        <div class="large-9 columns">
+          <p>Want to hear about great new deals when they are released?</p>
+        </div>
+        <div class="large-3 columns">
+          <a href="#" class="radius button right">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render 'footer' %>
+    
