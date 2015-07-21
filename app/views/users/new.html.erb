@@ -1,0 +1,26 @@
+<%= render 'static_pages/header' %>
+
+<div class="row">
+  <div class="large-12 columns">
+    <hr>
+  </div>
+</div>
+
+
+<form>
+  <div class="row">
+    <div class="large-6 large-centered columns">
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :email %>
+        <%= f.input :name, label: 'Name' %>
+        <%= f.input :password %>
+        <%= f.input :password_confirmation %>
+        <div class="large-5 large-centered columns">
+          <%= f.button :submit, 'Sign Me Up!' %>
+        </div
+      <% end %>
+    </div>
+  </div>
+</form>
+
+<%= render 'static_pages/footer' %>
