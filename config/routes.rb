@@ -23,16 +23,23 @@ Rails.application.routes.draw do
    resources :items, only: [:index, :show]
   end
   
-  get 'items'         => 'items#index'
-  get 'game_items'    => 'items#index'
-  get 'games'         => 'games#index'
-  get 'home'          => 'static_pages#index'
-  get 'game_item'     => 'items#show'
-  get 'signup'        => 'users#new'
+  get    'items'           => 'items#index'
+  get    'game_items'      => 'items#index'
+  get    'games'           => 'games#index'
+  get    'home'            => 'static_pages#index'
+  get    'game_item'       => 'items#show'
+  get    'signup'          => 'users#new'
   
-  get    'login'      => 'sessions#new'
-  post   'login'      => 'sessions#create'
-  delete 'logout'     => 'sessions#destroy'
+  get    'admin_dashboard' => 'admin#index'
+  get    'admin_orders'    => 'admin#orders'
+  get    'admin_games'     => 'admin#games'
+  get    'admin_items'     => 'admin#items'
+  get    'admin_quotes'    => 'admin#quotes'
+  get    'admin_users'     => 'admin#users'
+  
+  get    'login'           => 'sessions#new'
+  post   'login'           => 'sessions#create'
+  delete 'logout'          => 'sessions#destroy'
   
   # Example resource route with options:
   #   resources :products do

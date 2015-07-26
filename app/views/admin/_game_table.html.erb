@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Slug</th>
+      <th>Link</th>
+      <th>Image</th>
+      <th>Banner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @all_games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.slug %></td>
+        <td><%= game.link %></td>
+        <td><%= game.image %></td>
+        <td><%= game.banner %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

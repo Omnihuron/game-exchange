@@ -1,0 +1,35 @@
+<div class="row">    
+   
+  <div class="large-10 large-push-2 columns">
+    
+    
+    <h3 class="text-center">Games</h3>
+    <br/>
+    
+
+    <ul class="accordion" data-accordion="myAccordionGroup">
+      <li class="accordion-navigation">
+        <a href="#current-games">Current Games</a>
+        <div id="current-games" class="content active">
+          <%= render 'game_table' %>
+        </div>
+      </li>
+      
+      <li class="accordion-navigation">
+        <a href="#new-game">Add New Game</a>
+        <div id="new-game" class="content">
+          <%= render 'new_game' %>
+        </div>
+      </li>
+    </ul>
+    
+    
+    <%= simple_form_for @game do |f| %>
+    
+    <% end %>
+
+  </div>
+   
+  <%= render 'sidebar' %>
+  
+</div>
