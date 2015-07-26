@@ -1,0 +1,29 @@
+class AdminController < ApplicationController
+  before_filter :validate
+  
+  def index
+  end
+  
+  def orders
+  end
+  
+  def games
+    @all_games = Game.all
+    @game = Game.new unless @game
+  end
+  
+  def items
+  end
+  
+  def quotes
+  end
+  
+  def users
+  end
+  
+  def validate
+    unless logged_in? && current_user.admin 
+      redirect_to home_path 
+    end 
+  end
+end
