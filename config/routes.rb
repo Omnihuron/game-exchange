@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   get 'static_pages/about'
+  
+  get 'sessions/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -28,9 +30,9 @@ Rails.application.routes.draw do
   get 'game_item'     => 'items#show'
   get 'signup'        => 'users#new'
   
-  get    'login'  => 'sessions#new'
-  post   'login'  => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get    'login'      => 'sessions#new'
+  post   'login'      => 'sessions#create'
+  delete 'logout'     => 'sessions#destroy'
   
   # Example resource route with options:
   #   resources :products do

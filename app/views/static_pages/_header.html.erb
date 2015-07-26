@@ -18,8 +18,14 @@
         <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
       </ul>
     <% else %>
-      <li><a href="#" class="button">Sign In</a></li>
+      <li><%= link_to 'Sign In', login_path, class: 'button' %></li>
     <% end %>
     </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <hr>
   </div>
 </div>

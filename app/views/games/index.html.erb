@@ -1,9 +1,9 @@
-<%= render 'static_pages/header' %>
-
-<% @games.each do |game| %>
+<% @games.each_with_index do |game, index| %>
   <div class="row">
     <div class="large-12 columns">
-      <hr>
+      <% unless index == 0 %>
+        <hr>
+      <% end %>
       <div id="game-logo">
         <%= image_tag game.image %>
       </div>
@@ -15,6 +15,3 @@
     </div>
   </div>
 <% end %>
-
-<%= render 'static_pages/footer' %>
-

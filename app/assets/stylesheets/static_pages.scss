@@ -51,6 +51,10 @@ label {
   max-width: 62.5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 #logo {
   img{
     background-color: white;
@@ -106,4 +110,9 @@ label {
   a {
     float: right;
   }
+}
+
+#quote {
+  text-align: center;
+  font-style: italic;
 }

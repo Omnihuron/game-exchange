@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       
       if @user.save
-        flash[:info] = "Please check your email to activate your account"
+        flash[:success] = "Account successfully created!"
         log_in(@user)
         redirect_to home_path
       else
