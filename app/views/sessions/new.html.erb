@@ -1,0 +1,21 @@
+<form>
+  <div class="row">
+    <div class="large-6 large-centered columns">
+      <h1 class="text-center">Log In</h1>
+      <%= render 'static_pages/quote' %>
+      </br>
+      <%= simple_form_for(:session, url:{controller: :sessions, action: :create}) do |f| %>
+        <%= f.input :email %>
+        <%= f.input :password %>
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me on this computer</span>
+        <% end %>
+        </br>
+        <div class="large-4 large-centered columns">
+          <%= f.button :submit, 'Log In' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</form>
