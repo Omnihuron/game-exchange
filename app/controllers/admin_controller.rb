@@ -13,6 +13,8 @@ class AdminController < ApplicationController
   end
   
   def items
+    @all_items = Item.ordered
+    @item = Item.new unless @item
   end
   
   def quotes

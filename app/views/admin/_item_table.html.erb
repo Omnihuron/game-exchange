@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th width="125">Slug</th>
+      <th width="275">Description</th>
+      <th>Price</th>
+      <th width="125">Image</th>
+      <th>Modify</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @all_items.each do |item| %>
+      <tr>
+        <td><%= item.title %></td>
+        <td><%= item.slug %></td>
+        <td><%= item.description %></td>
+        <td><%= "$#{"%5.2f" % item.price}" %></td>
+        <td><%= image_tag item.image %></td>
+        <td>Edit / Remove</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+

@@ -5,9 +5,23 @@
     
     <h3 class="text-center">Items</h3>
     <br/>
-    <p>This is the items section. There will be tools for adding items here soon</p>
-    <p>Bacon ipsum dolor amet non occaecat capicola, turkey minim brisket strip steak. Quis meatball cupidatat, andouille do irure fugiat dolore pastrami jerky. Alcatra irure consectetur qui sint leberkas sausage ipsum enim deserunt venison nostrud ut. Eu culpa in, beef enim duis incididunt labore mollit.</p>
+    
 
+    <ul class="accordion" data-accordion="myAccordionGroup">
+      <li class="accordion-navigation">
+        <a href="#current-items">Current Items</a>
+        <div id="current-items" class="content active">
+          <%= render 'item_table' %>
+        </div>
+      </li>
+      
+      <li class="accordion-navigation">
+        <a href="#new-item">Add New Item</a>
+        <div id="new-item" class="content">
+          <%= render 'new_item' %>
+        </div>
+      </li>
+    </ul>
 
   </div>
    
