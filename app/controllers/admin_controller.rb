@@ -8,7 +8,7 @@ class AdminController < ApplicationController
   end
   
   def games
-    @all_games = Game.all
+    @all_games = Game.ordered
     @game = Game.new unless @game
   end
   

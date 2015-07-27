@@ -4,8 +4,9 @@
       <th>Title</th>
       <th>Slug</th>
       <th>Link</th>
-      <th>Image</th>
-      <th>Banner</th>
+      <th width="150">Image</th>
+      <th width="125">Banner</th>
+      <th>Modify</th>
     </tr>
   </thead>
   <tbody>
@@ -13,10 +14,29 @@
       <tr>
         <td><%= game.title %></td>
         <td><%= game.slug %></td>
-        <td><%= game.link %></td>
-        <td><%= game.image %></td>
-        <td><%= game.banner %></td>
+        <td><%= link_to "link", game.link %></td>
+        <td><%= image_tag game.image %></td>
+        <td><%= image_tag game.banner %></td>
+        <td><%= link_to "Edit", '#', data: {:'reveal-id' => "editModal#{game.id}"}%> 
+          / <%= link_to "Remove", '#', data: {:'reveal-id' => "removeModal#{game.id}"} %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+
+<% @all_games.each do |game| %>
+  <div id="<%="editModal#{game.id}"%>" class="reveal-modal" data-reveal 
+    aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'games/edit', locals: {game: game}  %>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+<% end %>
+
+<% @all_games.each do |game| %>
+  <div id="<%="removeModal#{game.id}"%>" class="reveal-modal" data-reveal 
+    aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'games/remove', locals: {game: game}  %>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+<% end %>
