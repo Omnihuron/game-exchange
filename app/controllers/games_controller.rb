@@ -20,6 +20,20 @@ class GamesController < ApplicationController
     end
   end
   
+  def edit
+  end
+  
+  def update
+    game = Game.find(params['id'])
+    if game.update_attributes(game_params)
+      flash[:success] = "Game successfully updated"
+      redirect_to admin_games_path
+    else
+      flash[:alert] = "Game could not be updated"
+      redirect_to admin_games_path
+    end
+  end
+  
   def game_params
     params.require(:game).permit(:title, :slug, :link, :image, :banner)
   end

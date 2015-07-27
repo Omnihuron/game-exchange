@@ -1,7 +1,7 @@
 <div class="row">
   <div class="large-6 large-centered columns">
-    
-    <%= simple_form_for @game do |f| %>
+    <h1 class="text-centered">Edit Game</h1>
+    <%= simple_form_for game do |f| %>
     
       <%= render 'shared/error_messages' %>
     
@@ -12,7 +12,7 @@
       <%= f.input :banner, label: 'Banner (should be square, at least 500x500)' %>
       </br>
       <div class="large-5 large-centered columns">
-        <%= f.button :submit, 'Add Game' %>
+        <%= f.button :submit, 'Update Game' %>
       </div>
     <% end %>
     

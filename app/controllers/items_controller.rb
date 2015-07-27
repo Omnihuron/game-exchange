@@ -5,12 +5,12 @@ class ItemsController < ApplicationController
       @items = Item.where(game_id: params['game_id'])
       @game = Game.find params['game_id']
       
-      @banner = "banners/#{@game.banner}"
+      @banner = @game.banner
       @game_title = @game.title
       @game_desc  = @game.slug
     else
       @items = Item.all
-      @banner = "banners/ogre.png"
+      @banner = "http://imgur.com/DRHFdqg.jpg"
       @game_title = "All Items"
       @game_desc = "View deals from all of our game titles"
     end

@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get    'game_item'       => 'items#show'
   get    'signup'          => 'users#new'
   
+  get    'game_edit'       => 'games#edit'
+  
   get    'admin_dashboard' => 'admin#index'
   get    'admin_orders'    => 'admin#orders'
   get    'admin_games'     => 'admin#games'
