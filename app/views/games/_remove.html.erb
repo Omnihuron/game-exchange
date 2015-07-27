@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="large-6 large-centered columns">
+    <h1 class="text-centered">Remove Game</h1>
+    <br/>
+    <p>Are you sure you want to remove <%= game.title %>?</p>
+    <p>This cannot be undone!</p>
+    <br/>
+    <%= link_to "I Understand, Blow It Up!", game_destroy_path(game_id: game.id), method: :delete, class: "button" %>
+  </div>
+</div>
