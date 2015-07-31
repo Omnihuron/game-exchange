@@ -16,6 +16,38 @@ class ItemsController < ApplicationController
     end
   end
   
+  def create
+    @item = Item.new(item_params)
+    
+    if @item.save
+      flash[:success] = "Item Added"
+      redirect_to admin_items_path
+    else
+      flash[:alert] = "Item could not be added"
+      redirect_to admin_items_path
+    end
+  end
+  
+  def update
+    item = Item.find(params['id'])
+    if item.update_attributes(item_params)
+      flash[:success] = "Item successfully updated"
+      redirect_to admin_items_path
+    else
+      flash[:alert] = "Item could not be updated"
+      redirect_to admin_items_path
+    end
+  end
+  
+  def destroy
+    Item.find(params['item_id']).destroy
+    flash[:success] = "Item successfully deleted"
+    redirect_to admin_items_path
+  end
+  
+  def edit
+  end
+  
   def show
     unless Item.try(:where, id: params['id'], game_id: params['game_id']).empty? then
       @item = Item.where(id: params['id'], game_id: params['game_id']).first

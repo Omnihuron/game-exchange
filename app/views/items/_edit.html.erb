@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="large-6 large-centered columns">
+    <h1 class="text-centered">Edit Game</h1>
+    <%= simple_form_for game do |f| %>
+    
+      <%= render 'shared/error_messages' %>
+    
+      <%= f.input :title %>
+      <%= f.input :slug %>
+      <%= f.input :link %>
+      <%= f.input :image, label: 'Image (approximately 400w x 150h)' %>
+      <%= f.input :banner, label: 'Banner (should be square, at least 500x500)' %>
+      </br>
+      <div class="large-5 large-centered columns">
+        <%= f.button :submit, 'Update Game' %>
+      </div>
+    <% end %>
+    
+  </div>
+</div>

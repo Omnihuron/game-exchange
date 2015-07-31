@@ -33,6 +33,9 @@ Rails.application.routes.draw do
   get    'game_edit'       => 'games#edit'
   delete 'game_destroy'    => 'games#destroy'
   
+  get    'item_edit'       => 'items#edit'
+  delete 'item_destroy'    => 'items#destroy'
+  
   get    'admin_dashboard' => 'admin#index'
   get    'admin_orders'    => 'admin#orders'
   get    'admin_games'     => 'admin#games'
