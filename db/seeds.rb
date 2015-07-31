@@ -1,8 +1,9 @@
 Game.create!([
-  {title: "Elder Scrolls Online", image: "http://imgur.com/68wm21f.jpg", slug: "Explore Tamriel in this MMORPG from Bethesda", link: "http://www.elderscrollsonline.com", banner: "http://imgur.com/oQRrSQo.jpg"},
-  {title: "Maplestory", image: "http://imgur.com/Q6LiC3e.jpg", slug: "Be a chibi fighter in this Anime-styled platformer!", link: "http://maplestory.nexon.net", banner: "http://imgur.com/98j5KfT.jpg"},
+  {title: "Runescape", image: "http://imgur.com/3Xxnjhw.jpg", slug: "Explore a vast world of might and magic", link: "http://www.runescape.com", banner: "http://imgur.com/VQsj5HQ.jpg"},
   {title: "Knight Online", image: "http://imgur.com/9vdExNE.jpg", slug: "Be a knight! And do it online!", link: "http://knight.nttgame.com", banner: "http://imgur.com/y8S2N6V.jpg"},
-  {title: "Runescape", image: "http://imgur.com/3Xxnjhw.jpg", slug: "Explore a vast world of might and magic", link: "http://www.runescape.com", banner: "http://imgur.com/VQsj5HQ.jpg"}
+  {title: "Maplestory", image: "http://imgur.com/Q6LiC3e.jpg", slug: "Be a chibi fighter in this Anime-styled platformer!", link: "http://maplestory.nexon.net", banner: "http://imgur.com/98j5KfT.jpg"},
+  {title: "Elder Scrolls Online", image: "http://imgur.com/68wm21f.jpg", slug: "Explore Tamriel in this MMORPG from Bethesda", link: "http://www.elderscrollsonline.com", banner: "http://imgur.com/oQRrSQo.jpg"}
+  
 ])
 Item.create!([
   {game_id: 1, title: "Armor Trimming", image: "http://imgur.com/hr3JVBk.jpg", slug: "Impress all your friends with trimmed armor!", description: "So I want to level up my crafting and you want trimmed armor. Just hand it over for two seconds and I'll give it back. A scam? What? Noooooo, why ever would you think that?", price: "3.5"},
