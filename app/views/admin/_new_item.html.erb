@@ -2,7 +2,7 @@
   <div class="large-6 large-centered columns">
     
     <%= simple_form_for @item do |f| %>
-    
+      <%= f.association :game %>
       <%= f.input :title %>
       <%= f.input :slug %>
       <%= f.input :description %>

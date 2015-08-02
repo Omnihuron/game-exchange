@@ -56,6 +56,10 @@ class ItemsController < ApplicationController
       redirect_to home_path
     end
   end
+
+  def item_params
+    params.require(:item).permit(:game_id, :title, :slug, :description, :image, :price)
+  end
   
   def not_found
     raise ActionController::RoutingError.new('Not Found')

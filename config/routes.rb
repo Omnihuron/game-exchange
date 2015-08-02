@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   
   get    'items'           => 'items#index'
   get    'game_items'      => 'items#index'
+  post   'items'           => 'items#create'
   get    'games'           => 'games#index'
   get    'home'            => 'static_pages#index'
   get    'game_item'       => 'items#show'
