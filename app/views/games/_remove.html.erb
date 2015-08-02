@@ -3,6 +3,7 @@
     <h1 class="text-centered">Remove Game</h1>
     <br/>
     <p>Are you sure you want to remove <%= game.title %>?</p>
+    <p>This will remove the game and all of its associated items!</p>
     <p>This cannot be undone!</p>
     <br/>
     <%= link_to "I Understand, Blow It Up!", game_destroy_path(game_id: game.id), method: :delete, class: "button" %>

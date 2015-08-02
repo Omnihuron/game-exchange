@@ -19,11 +19,25 @@
         <td><%= item.description %></td>
         <td><%= "$#{"%5.2f" % item.price}" %></td>
         <td><%= image_tag item.image %></td>
-        <td>Edit / Remove</td>
+        <td><%= link_to "Edit", '#', data: {:'reveal-id' => "editModal#{item.id}"}%>  
+          / <%= link_to "Remove", '#', data: {:'reveal-id' => "removeModal#{item.id}"} %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<% @all_items.each do |item| %>
+  <div id="<%="editModal#{item.id}"%>" class="reveal-modal" data-reveal 
+    aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'items/edit', locals: {item: item}  %>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+<% end %>
 
-
+<% @all_items.each do |item| %>
+  <div id="<%="removeModal#{item.id}"%>" class="reveal-modal" data-reveal 
+    aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'items/remove', locals: {item: item}  %>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+<% end %>

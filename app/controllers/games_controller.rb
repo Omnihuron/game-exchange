@@ -35,6 +35,7 @@ class GamesController < ApplicationController
   end
   
   def destroy
+    Item.where(game_id: params['game_id']).delete_all
     Game.find(params['game_id']).destroy
     flash[:success] = "Game successfully deleted"
     redirect_to admin_games_path
