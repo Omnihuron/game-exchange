@@ -20,11 +20,12 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :users
   resources :games do
-   resources :items, only: [:index, :show]
+   resources :items
   end
   
   get    'items'           => 'items#index'
   get    'game_items'      => 'items#index'
+  post   'items'           => 'items#create'
   get    'games'           => 'games#index'
   get    'home'            => 'static_pages#index'
   get    'game_item'       => 'items#show'
@@ -34,6 +35,7 @@ Rails.application.routes.draw do
   delete 'game_destroy'    => 'games#destroy'
   
   get    'item_edit'       => 'items#edit'
+  patch  'item_edit'       => 'items#update'
   delete 'item_destroy'    => 'items#destroy'
   
   get    'admin_dashboard' => 'admin#index'
