@@ -6,7 +6,12 @@
     <ul class="right button-group">
     <li><%= link_to "Games", games_path, class: "button" %></li>
     <li><%= link_to "All Deals", items_path, class: "button" %></li>
-    <li><a href="#" class="button"><i class="fa fa-shopping-cart"></i> Cart (0)</a></li>
+    
+    <li>
+      <%= link_to cart_path(current_user), class: "button"  do %>
+        <i class="fa fa-shopping-cart"></i> Cart (0) 
+      <% end %>
+    </li>
     <% if logged_in? %>
       <button href="#" data-dropdown="drop1" aria-controls="drop1" 
         aria-expanded="false" class="button dropdown"><i class="fa fa-user"></i> 

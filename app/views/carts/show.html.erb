@@ -1,0 +1,50 @@
+<% if @cart.empty? %>
+	<h1>Your cart is empty</h1>
+<% else %>
+	<div class="row">
+		
+		
+		<div class="large-9 columns">
+			
+			<table id="cart_table">
+				<thead>
+					<tr>
+						<th width="125"></th>
+						<th>Name</th>
+						<th>Game</th>
+						<th>Quantity</th>
+						<th>Price</th>
+						<th>Total</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @cart.each do |cart| %>
+						<% item = Item.find(cart.item_id) %>
+						<tr>
+							<td><%= image_tag item.image %></td>
+							<td><%= item.title %></td>
+							<td><%= Game.find(item.game_id).title %></td>
+							<td><%= cart.quantity %></td>
+							<td><%= "$#{"%5.2f" % item.price}" %></td>
+							<td><%= "$#{"%5.2f" % cart.total}" %></td>
+							<td>Remove</td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+
+		</div>
+		
+		<div class="large-3 columns">
+			<div class="panel">
+				<h1>Subtotal:</h1>
+				<br/>
+				<h3 class="text-center"><%= "$#{"%5.2f" % @subtotal}" %></h3>
+				<br/>
+				<a href="#" class="button">Check Out</a>
+			</div>
+		</div>
+
+	</div>
+<% end %>

@@ -32,6 +32,9 @@ gem 'seed_dump'
 
 gem "font-awesome-rails"
 gem 'foundation-rails'
+
+gem 'activemerchant'
+gem 'stripe'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

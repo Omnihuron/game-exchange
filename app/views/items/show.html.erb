@@ -20,7 +20,7 @@
     </div>
     <div class="panel" id="checkout">
       <h5 class="large"><strong><%= "$#{"%5.2f" % @item.price}" %></strong></h5>
-    <a href="#" class="button">Add to Cart</a>
+      <%= link_to "Add to Cart", new_cart_path(id: @item.id), class: "button" %>
     </div>
   </div>
 </div>
